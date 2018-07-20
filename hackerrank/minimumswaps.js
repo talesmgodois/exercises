@@ -35,5 +35,4 @@ function minimumSwaps(arr) {
 
     return arr;
 }
-// console.log(minimumSwaps([7, 1, 3, 2, 4, 5, 6]));
 console.log(minimumSwaps([4,3,1,2]));
