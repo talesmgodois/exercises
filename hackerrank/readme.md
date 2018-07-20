@@ -15,7 +15,7 @@ For example, given the array  we perform the following steps:
 >5   [1, 2, 3, 4, 5, 6, 7]
 >It took  swaps to sort the array.
 
-Function Description
+#### Function Description
 
 Complete the function minimumSwaps in the editor below. It must return an integer representing the minimum number of swaps to sort the array.
 
