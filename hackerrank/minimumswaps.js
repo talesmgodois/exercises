@@ -1,5 +1,5 @@
 function minimumSwaps(arr) {
-let swaps = 0;
+  let swaps = 0;
   for(let i=0; i< arr.length; i++){
       if(i+1!== arr[i]){
         let t = i;
@@ -30,11 +30,3 @@ console.log(minimumSwaps(
     10, 4, 28, 36, 30, 37, 35, 20, 17,
     45, 43, 25, 19
 ]));
-
-
-
-
-//
-//[4,3,1,2]
-//
-//[2,1,3,4]
