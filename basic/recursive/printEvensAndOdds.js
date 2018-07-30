@@ -27,7 +27,5 @@ function printOdds( N ) {
 
 }
 
-
-
 printEvens(10);
 printOdds(10);
