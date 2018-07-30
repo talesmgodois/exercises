@@ -28,8 +28,6 @@ function printFromNToZero( N ) {
         printFromNToZero(N - 1);
     }
 
-
-
 }
 
 printFromZeroToN(10);
