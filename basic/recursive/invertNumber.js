@@ -1,5 +1,5 @@
 function invert(number){
-    array = (''+number).split('');
+    let array = (''+number).split('');
     return +invertArray(array).join("")
 }
 

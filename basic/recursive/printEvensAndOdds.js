@@ -16,7 +16,6 @@ function printEvens( N ) {
 }
 
 function printOdds( N ) {
-
     if(N >= 0){
         if(N % 2 !== 0 ){
             console.log(N);
@@ -24,6 +23,7 @@ function printOdds( N ) {
         }
         printOdds(N - 1);
     }
+
 
 }
 
