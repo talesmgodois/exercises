@@ -1,39 +1,32 @@
-// You are given an unordered array consisting of consecutive integers  [1, 2, 3, ..., n] without any duplicates. You are allowed to swap any two elements. You need to find the minimum number of swaps required to sort the array in ascending order.
-//
-// For example, given the array  we perform the following steps:
-//
-// i   arr                         swap (indices)
-// 0   [7, 1, 3, 2, 4, 5, 6]   swap (0,3)
-// 1   [2, 1, 3, 7, 4, 5, 6]   swap (0,1)
-// 2   [1, 2, 3, 7, 4, 5, 6]   swap (3,4)
-// 3   [1, 2, 3, 4, 7, 5, 6]   swap (4,5)
-// 4   [1, 2, 3, 4, 5, 7, 6]   swap (5,6)
-// 5   [1, 2, 3, 4, 5, 6, 7]
-// It took  swaps to sort the array.
-//
-// Function Description
-//
-// Complete the function minimumSwaps in the editor below. It must return an integer representing the minimum number of swaps to sort the array.
-//
-// minimumSwaps has the following parameter(s):
-//
-// arr: an unordered array of integers
-
 function minimumSwaps(arr) {
-    let swaps = 0;
-    for(let i=0; i< arr.length; i++){
-      console.log(arr);
-        if(arr[i] !== (i + 1)){
-
-            let aux =arr[arr[i] - 1];
-            arr[arr[i] - 1] = arr[i];
-            arr[i] = aux;
-            swaps++;
+  let swaps = 0;
+  for(let i=0; i< arr.length; i++){
+      if(i+1!== arr[i]){
+        let t = i;
+        while(arr[t]!== i+1){
+          t++;
         }
+        let temp = arr[t];
+        arr[t] = arr[i];
+        arr[i] = temp;
+        swaps++;
+      }
+  }
+  return swaps;
 
-    }
-
-    return arr;
 }
-// console.log(minimumSwaps([7, 1, 3, 2, 4, 5, 6]));
 console.log(minimumSwaps([4,3,1,2]));
+console.log(minimumSwaps([4,3,2,1]));
+console.log(minimumSwaps([1, 5, 4, 3, 2]));
+console.log(minimumSwaps([7, 1, 3, 2, 4, 5, 6]));
+console.log(minimumSwaps([2, 1, 3, 7, 4, 5, 6]));
+console.log(minimumSwaps([3, 7, 6, 9, 1, 8, 10, 4, 2, 5]));
+console.log(minimumSwaps(
+  [
+    2, 31, 1, 38, 29, 5, 44, 6, 12, 18,
+    39, 9, 48, 49, 13, 11, 7, 27, 14,
+    33, 50, 21, 46, 23, 15, 26, 8, 47,
+    40, 3, 32, 22, 34, 42, 16, 41, 24,
+    10, 4, 28, 36, 30, 37, 35, 20, 17,
+    45, 43, 25, 19
+]));
